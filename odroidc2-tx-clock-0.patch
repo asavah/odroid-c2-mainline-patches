@@ -1,0 +1,22 @@
+diff --git a/drivers/mmc/host/meson-gx-mmc.c b/drivers/mmc/host/meson-gx-mmc.c
+index 85745ef179e2..e2c9b68c2fce 100644
+--- a/drivers/mmc/host/meson-gx-mmc.c
++++ b/drivers/mmc/host/meson-gx-mmc.c
+@@ -617,7 +617,7 @@ static int meson_mmc_clk_init(struct meson_host *host)
+ 	 * initialisation issues and enable eMMC DDR52 mode.
+ 	 */
+ 	clk_set_phase(host->mmc_clk, 180);
+-	clk_set_phase(host->tx_clk, 270);
++	clk_set_phase(host->tx_clk, 0);
+ 	clk_set_phase(host->rx_clk, 0);
+ 
+ 	return clk_prepare_enable(host->mmc_clk);
+@@ -764,7 +764,7 @@ static void meson_mmc_set_ios(struct mmc_host *mmc, struct mmc_ios *ios)
+ 
+ 		/* Reset phases */
+ 		clk_set_phase(host->rx_clk, 0);
+-		clk_set_phase(host->tx_clk, 270);
++		clk_set_phase(host->tx_clk, 0);
+ 
+ 		break;
+ 

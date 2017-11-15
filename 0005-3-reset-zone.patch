@@ -1,0 +1,13 @@
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gx.dtsi b/arch/arm64/boot/dts/amlogic/meson-gx.dtsi
+index 80a0f2b..9b19656 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gx.dtsi
++++ b/arch/arm64/boot/dts/amlogic/meson-gx.dtsi
+@@ -220,7 +220,7 @@
+ 
+ 			reset: reset-controller@4404 {
+ 				compatible = "amlogic,meson-gx-reset", "amlogic,meson-gxbb-reset";
+-				reg = <0x0 0x04404 0x0 0x20>;
++				reg = <0x0 0x04404 0x0 0x9c>;
+ 				#reset-cells = <1>;
+ 			};
+ 
